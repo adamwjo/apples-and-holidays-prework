@@ -69,6 +69,7 @@ def all_supplies_in_holidays(holiday_hash)
     puts value
     value.collect do |key, value|
       puts key.to_s + value.join(" ")
+    end
 
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
