@@ -64,11 +64,12 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  arr = []
   holiday_hash.collect do |key, value|
-    arr.push(key.to_s, value)
-  end
-  arr.join
+    puts key.to_s
+    puts value
+    value.collect do |key, value|
+      puts key.to_s + value.join(" ")
+
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
   #   Christmas: Lights, Wreath
