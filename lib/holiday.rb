@@ -67,12 +67,9 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.collect do |key, value|
     puts key.to_s.capitalize + ":"
     value.collect do |key, value|
-      new_key = key.to_s
-      arr = new_key.split("_")
-      arr.collect do |item, index|
-        item.capitalize!
-      end
-      new_word = arr.join(" ")
+      new_word = key.to_s.split("_").collect do |item, index|
+        item.capitalize
+      end.join(" ")
 
       puts "  " + new_word + ": " + value.join(", ")
     end
