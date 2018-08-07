@@ -54,7 +54,7 @@ end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   holiday_hash[season] = holiday_name
-  holiday_name[supply_array]
+  holiday_name["#{supply_array}"]
 
 end
 
